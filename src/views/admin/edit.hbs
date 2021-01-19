@@ -1,0 +1,76 @@
+{{#each errors}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{text}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+<div class="container">
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h3>Editar alumno</h3>
+    </div>
+    <div class="card-body">
+      <form action="/admin/edit-alumno/{{alumno._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+         <div class="form-group">
+            <label for="matricula" class="form-control-label">Matricula</label>
+          <input type="text" name="matricula" class="form-control" value="{{alumno.matricula}}" autofocus/>
+        </div>
+        <div class="form-group">
+            <label for="nombres" class="form-control-label">Nombre(s)</label>
+          <input type="text" name="nombres" class="form-control" value="{{alumno.nombres}}"></input>
+        </div>
+        <div class="form-group">
+            <label for="apellidop" class=" form-control-label">Apellido Paterno</label>
+          <input type="text" name="apellidop" class="form-control" value="{{alumno.apellidop}}"></input>
+        </div>
+        <div class="form-group">
+            <label for="apellidom" class=" form-control-label">Apellido Materno</label>
+          <input name="apellidom" class="form-control" value="{{alumno.apellidom}}"></input>
+        </div>
+        <div class="form-group">
+           <label for="genero" class=" form-control-label">Genero</label>
+          <select name="genero" name="genero" value="{{alumno.genero}}" class="form-control">
+                            <option value="F">Femeninino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Otro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="carrera" class=" form-control-label">Carrea</label>
+           <select name="carrera" name="carrera" value="{{alumno.carrera}}" class="form-control">
+                            <option value="TSU.Procesos Industriales">TSU.Procesos Industriales</option>
+                            <option value="TSU.Desarrollo de Negocios: Area Mercadotecnia">TSU.Desarrollo de Negocios: Area Mercadotecnia</option>
+                            <option value="TSU.Tecnologías de la Información y Comunicación Area: Sistemas">TSU.Tecnologías de la Información y Comunicación Area: Sistemas</option>
+                            <option value="TSU.Tecnologías de la Información y Comunicación Area: Multimedia">TSU.Tecnologías de la Información y Comunicación Area: Multimedia</option>
+                            <option value="TSU.Tecnologías de la Información y Comunicación Area: Redes">TSU.Tecnologías de la Información y Comunicación Area: Redes</option>
+                            <option value="TSU.Mantenimiento Industrial">TSU.Mantenimiento Industrial</option>
+                            <option value="TSU.Mecatrónica">TSU.Mecatrónica</option>
+                            <option value="TSU.Energías Renovables">TSU.Energías Renovables</option>
+                            <option value="TSU.Minería">TSU.Minería</option>
+                            <option value="TSU.Administración: Área Recursos Humanos">TSU.Administración: Área Recursos Humanos</option>
+                            <option value="TSU.Terapia Física">TSU.Terapia Física</option>
+                            <option value="TSU.Agricultura Sustentable y Protegida">TSU.Agricultura Sustentable y Protegida</option>
+                            <option value="ING.Procesos y Operaciones Industriales">ING.Procesos y Operaciones Industriales</option>
+                            <option value="ING.Negocios e Innovación Empresarial">ING.Negocios e Innovación Empresarial</option>
+                            <option value="ING.TICS">ING.TICS</option>
+                            <option value="ING.Mecatrónica">ING.Mecatrónica</option>
+                            <option value="ING.Energías Renovables">ING.Energías Renovables</option>
+                            <option value="ING.Minería">ING.Minería</option>
+                            <option value="Lic.Procesos Avanzados de Fabricación">Lic.Procesos Avanzados de Fabricación</option>
+                            <option value="Lic.Comercio Internacional de Productos Agroindustriales">Lic.Comercio Internacional de Productos Agroindustriales</option>
+                    </select>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

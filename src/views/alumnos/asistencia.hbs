@@ -1,0 +1,56 @@
+<div class="container">
+    <section class="p-t-20">
+        <div class="container">
+            <div class="row">
+             <div class="col-md-12">
+                    <h3 class="title-5 m-b-35">Alumnos</h3>
+                        <div class="table-data__tool">
+                            <a href="/alumnos/entrada/"<button class="btn btn-primary btn-block" type="submit">
+                        Entrada
+                        </button></a>
+                        </div>
+                                
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                            <th>RFID</th>
+                                            <th>Ingreso</th>
+                                            <th>Salida</th>
+                                            <th>Estatus</th>
+                                            <th>Actividad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each asistencia}}
+                                        <tr class="tr-shadow">
+                                            <td>{{ matricula }}</td>
+                                            <td>
+                                                <span class="block-email">{{ entrada }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ salida }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="status--process">{{estatus}}</span>
+                                            </td>
+                                            <td></td>
+                                            
+                                            <td>
+                                                <div class="table-data-feature">
+                                                     <a href="/alumnos/salida/{{_id}}" <button class="item" data-toggle="tooltip" data-placement="top" title="Salida">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button></a>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                     </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

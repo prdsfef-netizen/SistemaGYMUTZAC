@@ -1,0 +1,77 @@
+<div class="container">
+    <section class="p-t-20">
+        <div class="container">
+            <div class="row">
+             <div class="col-md-12">
+                    <h3 class="title-5 m-b-35">Alumnos</h3>
+                        <div class="table-data__tool">
+                            <div class="table-data__tool-left">
+                                <div class="table-data__tool-center">
+                                    <div class="au-breadcrumb-content">
+                                    <form class="au-form-icon--sm" action="admin/find-alumno" method="post">
+                                    <input class="au-input--w300 au-input--style2" type="text" placeholder="Buscar alumnos">
+                                    <button class="au-btn--submit2" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                    </button>
+                                </form>
+                                </div>
+                                 </div>
+                                 </div>
+                                <div class="table-data__tool-right">
+                                    <a href="/admin/add"  class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                        <i class="zmdi zmdi-plus" ></i>Agregar alumno</a>
+                                </div>
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                            <th>RFID</th>
+                                            <th>Matricula</th>
+                                            <th>Nombre</th>
+                                            <th>Apellido materno</th>
+                                            <th>Apellido salida</th>
+                                            <th>Carrera</th>
+                                            
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each alumno}}
+                                        <tr class="tr-shadow">
+                                            <td>{{ tarjeta }}</td>
+                                            <td>{{ matricula }}</td>
+                                            <td>
+                                                <span class="block-email">{{ nombres }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ apellidop }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ apellidom }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ carrera }}</span>
+                                            </td>
+                                            
+                                            <td></td>
+                                            <td>
+                                                <div class="table-data-feature">
+                                                   <a href="/admin/edit/{{_id}}" <button class="item" data-toggle="tooltip" data-placement="top" title="Editar">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button></a>
+                                                      <form action="/admin/delete/{{_id}}?_method=DELETE" method="POST"><button class="item" data-toggle="tooltip" data-placement="top" title="Borrar">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </button></form>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                     </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

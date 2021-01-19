@@ -1,0 +1,72 @@
+<div class="container">
+    <section class="p-t-20">
+        <div class="container">
+            <div class="row">
+             <div class="col-md-12">
+                    <h3 class="title-5 m-b-35">Alumnos</h3>
+                        <div class="table-data__tool">
+                            
+                                 </div>
+                                
+                                
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                            <th>RFID</th>
+                                            <th>Matricula</th>
+                                            <th>Nombre</th>
+                                            <th>Apellidos</th>
+                                            <th>Carrera</th>
+                                            <th>Ingreso</th>
+                                            <th>Salida</th>
+                                            <th>Estatus</th>
+                                            <th>Actividad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each alumno}}
+                                        <tr class="tr-shadow">
+                                            <td>{{ tarjeta }}</td>
+                                            <td>{{ matricula }}</td>
+                                            <td>
+                                                <span class="block-email">{{ nombres }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ apellidop }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ apellidom }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ entrada }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="block-email">{{ salida }}</span>
+                                            </td>
+                                            <td>
+                                                <span class="status--process">{{estatus}}</span>
+                                            </td>
+                                            <td></td>
+                                            
+                                            <td>
+                                                <div class="table-data-feature">
+                                                   <a href="/alumnos/entrada/{{_id}}" <button class="item" data-toggle="tooltip" data-placement="top" title="Entrada">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button></a>
+                                                    <a href="/alumnos/salida/{{_id}}" <button class="item" data-toggle="tooltip" data-placement="top" title="Salida">
+                                                        <i class="zmdi zmdi-edit"></i>
+                                                    </button></a>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                     </tbody>
+                                </table>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

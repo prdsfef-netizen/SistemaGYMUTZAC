@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+     <div class="naver__logo">
+                        <a href="/">
+                            <img src="/images/icon/logo-mini.png" alt="CoolAdmin" />
+                        </a>
+                    </div>
+    <a class="navbar-brand" href="/">Sistema de Control de Gimnasio | GYMUTZAC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/alumnos/asistencia">Alumnos <span class="sr-only">(current)</span></a>
+          </li>
+        
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if Usuario}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Alumnos 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/admin/list">Todos los alumnos</a>
+              <a class="dropdown-item" href="/admin/register">Agregar alumno</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/logout">Cerrar Session</a>
+            </div>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">Inicar Sesion</a>
+          </li>
+        
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
